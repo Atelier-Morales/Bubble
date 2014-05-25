@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://bl.ocks.org/mbostock/raw/7607535/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<style>
+
+@font-face {
+    font-family: 'bubblegumregular';
+    src: url('bubblegum-webfont.eot');
+    src: url('bubblegum-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bubblegum-webfont.woff') format('woff'),
+         url('bubblegum-webfont.ttf') format('truetype'),
+         url('bubblegum-webfont.svg#bubblegumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node--leaf {
+  fill: white;
+}
+
+.label {
+  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif, bold;
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf {
+  pointer-events: none;
+}
+
+.bandeau
+{
+  width:100%; 
+  height:90px; 
+  background:#00a2ea; 
+  font-family:"bubblegumregular";
+  font-size: 50px;
+  color:white;
+  position:absolute; top:0; left:0;
+}
+
+.search { 
+  padding:6px 15px 6px 30px;
+  margin-bottom:7px;
+  margin-right: 40px;
+    font-size:15px;
+  float:right;
+  background: url('./search.png') no-repeat 8px 6px; 
+  background-color:white;
+}
+.rounded { 
+  border-radius:15px; 
+  -moz-border-radius:15px; 
+  -webkit-border-radius:15px; 
+}
+
+.ui-datepicker-calendar {
+    display: none;
+}
+
+.nice-input {
+    background:#fff;
+    border-color:#aaa #eaeaea #eaeaea #eaeaea; border-style:solid; border-width:1px;
+    font-size:15px;
+    padding:6px 15px 6px 30px;
+    outline:none;
+    float:right;
+  border-radius:15px; 
+  -moz-border-radius:15px; 
+  -webkit-border-radius:15px; 
+}
+.nice-input:focus {
+    border-color:#aaa;
+    -webkit-box-shadow:0px 0px 5px #aaa; -moz-box-shadow:0px 0px 5px #aaa;
+        -o-box-shadow:0 0 5px #aaa; box-shadow:0 0 5px #aaa;
+}
+
+</style>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+$(document).ready(function() {
+   $('#txtDate').datepicker({
+     changeMonth: true,
+     changeYear: true,
+     changeDay: false,
+     dateFormat: 'MM yy',
+       
+     onClose: function() {
+        var iMonth = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+        var iYear = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+        $(this).datepicker('setDate', new Date(iYear, iMonth, 1));
+     },
+       
+     beforeShow: function() {
+       if ((selDate = $(this).val()).length > 0) 
+       {
+          iYear = selDate.substring(selDate.length - 4, selDate.length);
+          iMonth = jQuery.inArray(selDate.substring(0, selDate.length - 5), $(this).datepicker('option', 'monthNames'));
+          $(this).datepicker('option', 'defaultDate', new Date(iYear, iMonth, 1));
+           $(this).datepicker('setDate', new Date(iYear, iMonth, 1));
+       }
+    }
+  });
+});
+  </script>
+</head>
+<body style="background-color:#fff; width:100%; height:100%;">
+<div class="bandeau"><div style="padding-top:20px; padding-left:30px; ">&nbsp;<img src="logo.png" height="50" style="float:left;" /> Bubble &nbsp;&nbsp;&nbsp;
+
+  <span><input type="text" class="search rounded" placeholder="Search..."></span>
+
+<input type="text" id="txtDate" class="nice-input" placeholder="Date scope" />
+
+</div> </div>
+<div style="width:100%; height:100px;"></div>
+<script src="./d3.v3.min.js"></script>
+<div style="width:960px; height:960px;">
+<div id="graph"></div>
+
+</div>
+<script>
+
+$(document).ready(function() {
+
+
+
+  $("#changescope").on("click", function() { 
+    $.ajax({
+      url: "test.html",
+      cache: false
+    })
+      .done(function( html ) {
+
+        $( "#graph" ).hide();
+        $( "#graph" ).html( html );
+        $( "#graph" ).show( "puff", 700 );
+      });
+
+
+
+   });
+  $("#backtoroot").on("click", function() { 
+    $.ajax({
+      url: "test2.html",
+      cache: false
+    })
+      .done(function( html ) {
+
+        $( "#graph" ).hide();
+        $( "#graph" ).html( html );
+        $( "#graph" ).show( "puff", 700 );
+      });
+
+
+
+   });
+  });
+
+var margin = 20,
+    diameter = 960;
+
+var color = d3.scale.linear()
+    .domain([-1, 5])
+    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .interpolate(d3.interpolateHcl);
+
+var pack = d3.layout.pack()
+    .padding(2)
+    .size([diameter - margin, diameter - margin])
+    .value(function(d) { return d.size; })
+
+var svg = d3.select("#graph").append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+  .append("g")
+    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+d3.json("collaborateur.json", function(error, root) {
+  if (error) return console.error(error);
+
+  var focus = root,
+      nodes = pack.nodes(root),
+      view;
+
+  var circle = svg.selectAll("circle")
+      .data(nodes)
+    .enter().append("circle")
+      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
+      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+
+  var text = svg.selectAll("text")
+      .data(nodes)
+    .enter().append("text")
+      .attr("class", "label")
+      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+      .style("display", function(d) { return d.parent === root ? null : "none"; })
+      .text(function(d) { return d.name; });
+
+  var node = svg.selectAll("circle,text");
+
+
+  //d3.select("#graph")
+      //.style("background", color(-1))
+      //.on("click", function() { zoom(root); });
+  //d3.select("#backtoroot")
+      //.style("background", color(-1))
+   //   .on("click", function() { zoom(root); });
+
+  zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+  function zoom(d) {
+    var focus0 = focus; focus = d;
+
+    var transition = d3.transition()
+        .duration(d3.event.altKey ? 7500 : 750)
+        .tween("zoom", function(d) {
+          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+          return function(t) { zoomTo(i(t)); };
+        });
+
+    transition.selectAll("text")
+      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+        .each("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+        .each("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+  }
+
+  function zoomTo(v) {
+    var k = diameter / v[2]; view = v;
+    node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+    circle.attr("r", function(d) { return d.r * k; });
+  }
+});
+
+d3.select(self.frameElement).style("height", diameter + "px");
+
+</script>
+</body>
+<br />
+<br />
+<br />
+<input type="button" value="Global view" id="changescope" />
+<input type="button" value="User view" id="backtoroot" />
+
+</html>

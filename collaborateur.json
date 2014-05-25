@@ -1,0 +1,99 @@
+{
+ "name": "Jean-Michel JEAN-MICHEL",
+ "children": [
+  {
+   "name": "Equipes",
+   "children": [
+    {
+     "name": "Commando Delta One",
+     "children": [
+      {"name": "5 interns", "size": 721},
+      {"name": "7 devs", "size": 4294},
+      {"name": "deputy-chief : Frank FRANK", "size": 9800},
+      {"name": "Head of project : Jean-Marc JESUS", "size": 10000},
+      {"name": "3 support resources", "size": 5220}
+     ]
+    },
+    {"name": "DataField", "size": 1759},
+    {"name": "DataSchema", "size": 2165},
+    {"name": "DataSource", "size": 3331},
+    {"name": "DataUtil", "size": 3322}
+   ]
+  },
+  {
+   "name": "Technos",
+   "children": [
+    {"name": "VBA", "size": 10993},
+    {
+     "name": "Databases",
+     "children": [
+      {"name": "Oracle", "size": 3165},
+      {"name": "SQL", "size": 2815},
+      {"name": "Access", "size": 3366}
+     ]
+    },
+    {"name": "Python", "size": 17705},
+    {
+     "name": "Web",
+     "children": [
+      {"name": "Symfony2", "size": 6367},
+      {"name": "PHP", "size": 1229},
+      {"name": "Javascript", "size": 2059},
+      {"name": "HMTL+CSS", "size": 2291}
+     ]
+    },
+    {"name": "C", "size": 5559},
+    {"name": "Shell Scripts", "size": 19118},
+    {"name": "Unix", "size": 6887},
+    {"name": "Big data", "size": 6557},
+    {"name": "Assembler", "size": 22026}
+   ]
+  },
+  {
+   "name": "Ongoing Projects",
+   "children": [
+    {
+     "name": "MARK-SOL risk evalutation",
+     "children": [
+      {"name": "Project start date : 28/06/2013", "size": 29000},
+      {"name": "Expected delivery date : 07/2013", "size": 29000},
+      {"name": "5 people team", "size": 11000},
+      {"name": "Status : Back-end dev", "size": 22000},
+      {
+       "name": "Tasks",
+       "children": [
+        {"name": "Data sorting and crunching", "size": 5000},
+        {"name": "Conception of Dolphin Analysis model", "size": 10000},
+        {"name": "Updating internal database", "size": 5000},
+        {"name": "Evaluation of Control tools", "size": 7000}
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Retail Bank OS 2.0",
+     "children": [
+      {
+       "name": "Team",
+       "children": [
+        {"name": "Jean-Marc MARCUS - Head of IT", "size": 6500},
+        {"name": "Jean-Luc HELLOWORLD - Associate", "size": 5000},
+        {"name": "Jean-Louis Quatorze - stagiaire", "size": 3444}
+       ]
+      },
+      {
+       "name": "encoder",
+       "children": [
+        {"name": "ColorEncoder", "size": 3179},
+        {"name": "Encoder", "size": 4060},
+        {"name": "PropertyEncoder", "size": 4138},
+        {"name": "ShapeEncoder", "size": 1690},
+        {"name": "SizeEncoder", "size": 1830}
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
