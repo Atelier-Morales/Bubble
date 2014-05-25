@@ -174,8 +174,8 @@ var margin = 20,
     diameter = 960;
 
 var color = d3.scale.linear()
-    .domain([-1, 5])
-    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .domain([-1, 6])
+    .range(["hsl(24,80%,80%)", "hsl(228,30%,40%)"])
     .interpolate(d3.interpolateHcl);
 
 var pack = d3.layout.pack()
@@ -214,9 +214,9 @@ d3.json("collaborateur.json", function(error, root) {
   var node = svg.selectAll("circle,text");
 
 
-  //d3.select("#graph")
-      //.style("background", color(-1))
-      //.on("click", function() { zoom(root); });
+  d3.select("#graph")
+      .style("background", color(-1))
+      .on("click", function() { zoom(root); });
   //d3.select("#backtoroot")
       //.style("background", color(-1))
    //   .on("click", function() { zoom(root); });
