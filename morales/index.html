@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0040)http://bl.ocks.org/mbostock/raw/7607535/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="css/page.css" />
-<link rel="stylesheet" type="text/css" href="buttons/buttons.css" />
 <style>
 
 @font-face {
@@ -31,7 +29,7 @@
 }
 
 .label {
-  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif, bold;
   text-anchor: middle;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
 }
@@ -44,20 +42,28 @@
 
 .bandeau
 {
-  width:100%;
-  height:90px;
-  background:#00a2ea;
+  width:100%; 
+  height:90px; 
+  background:#00a2ea; 
   font-family:"bubblegumregular";
   font-size: 50px;
   color:white;
   position:absolute; top:0; left:0;
 }
 
-.rounded {
-  border:none;
-  border-radius:15px;
-  -moz-border-radius:15px;
-  -webkit-border-radius:15px;
+.search { 
+  padding:6px 15px 6px 30px;
+  margin-bottom:7px;
+  margin-right: 40px;
+    font-size:15px;
+  float:right;
+  background: url('./search.png') no-repeat 8px 6px; 
+  background-color:white;
+}
+.rounded { 
+  border-radius:15px; 
+  -moz-border-radius:15px; 
+  -webkit-border-radius:15px; 
 }
 
 .ui-datepicker-calendar {
@@ -71,10 +77,9 @@
     padding:6px 15px 6px 30px;
     outline:none;
     float:right;
-  border-radius:15px;
-  -moz-border-radius:15px;
-  -webkit-border-radius:15px;
-  margin-right:20px;
+  border-radius:15px; 
+  -moz-border-radius:15px; 
+  -webkit-border-radius:15px; 
 }
 .nice-input:focus {
     border-color:#aaa;
@@ -82,81 +87,10 @@
         -o-box-shadow:0 0 5px #aaa; box-shadow:0 0 5px #aaa;
 }
 
-.right
-{
-  float: right;
-  position: relative;
-}
-
-.searchmenu
-{
-  opacity:0;
-  background-color: #fff;
-  position: absolute;
-  top: 34px;
-  left: 7px;
-  right: 46px;
-  border: 1px solid #00a2ea;
-  border-radius: 3px;
-}
-
-.searchmenu.active
-{
-  opacity:1;
-}
-
-.searchmenu a:hover
-{
-  background-color: rgba(0, 162, 234, 0.15);
-}
-
-.searchmenu a
-{
-  font-size: 0.3em;
-  display: block;
-  color: #00a2ea;
-  padding: 20px;
-  text-decoration: none;
-  line-height: 30px;
-    font: 0.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.menu-element + .menu-element
-{
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.legend
-{
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.person
-{
-  background-color: blue;
-}
-.project
-{
-  background-color: green;
-}
-.team
-{
-  background-color: orange;
-}
-
-.link-text
-{
-  margin-bottom: 0px;
-}
-
 </style>
-<link rel="stylesheet" href="jquery-ui.css">
-  <script src="jquery-1.10.2.js"></script>
-  <script src="jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>
 $(document).ready(function() {
    $('#txtDate').datepicker({
@@ -164,28 +98,15 @@ $(document).ready(function() {
      changeYear: true,
      changeDay: false,
      dateFormat: 'MM yy',
-
+       
      onClose: function() {
         var iMonth = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
         var iYear = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
         $(this).datepicker('setDate', new Date(iYear, iMonth, 1));
-        if(iMonth < 4)
-        {
-          $.ajax({
-            url: "collaborateurold.html",
-            cache: false
-          })
-            .done(function( html ) {
-
-              $( "#graph" ).hide();
-              $( "#graph" ).html( html );
-              $( "#graph" ).show( "puff", 700 );
-            });
-        }
      },
-
+       
      beforeShow: function() {
-       if ((selDate = $(this).val()).length > 0)
+       if ((selDate = $(this).val()).length > 0) 
        {
           iYear = selDate.substring(selDate.length - 4, selDate.length);
           iMonth = jQuery.inArray(selDate.substring(0, selDate.length - 5), $(this).datepicker('option', 'monthNames'));
@@ -194,34 +115,13 @@ $(document).ready(function() {
        }
     }
   });
-
 });
   </script>
 </head>
 <body style="background-color:#fff; width:100%; height:100%;">
 <div class="bandeau"><div style="padding-top:20px; padding-left:30px; ">&nbsp;<img src="logo.png" height="50" style="float:left;" /> Bubble &nbsp;&nbsp;&nbsp;
 
-  <span>
-    <div class="right">
-      <input type="text" class="nice-input search rounded" placeholder="Search...">
-      <div class="searchmenu">
-        <div id="collaborateur" class="menu-element">
-          <a href="#">
-            <img src="collaborateur.png" height="30" /><span class="link-text">Jean pierre</span>
-          </a>
-        </div>
-        <div id="projet" class="menu-element">
-          <a href="#">
-            <img src="projet.png" height="30" /><span class="link-text">Projet Bubble</span>
-          </a>
-        </div>
-        <div id="team" class="menu-element">
-          <a href="#">
-            <img src="equipe.png" height="30" /><span class="link-text">Spartiates</span>
-          </a>
-        </div>
-      </div>
-    </div></span>
+  <span><input type="text" class="search rounded" placeholder="Search..."></span>
 
 <input type="text" id="txtDate" class="nice-input" placeholder="Date scope" />
 
@@ -230,25 +130,15 @@ $(document).ready(function() {
 <script src="./d3.v3.min.js"></script>
 <div style="width:960px; height:960px;">
 <div id="graph"></div>
+
 </div>
 <script>
 
 $(document).ready(function() {
 
-  $("input.search").click(function(e)
-  {
-    console.log("click search");
-    $(".searchmenu").toggleClass("active");
-    e.stopImmediatePropagation();
-  });
 
-  $("body").click(function()
-  {
-    console.log("unclick search");
-    $(".searchmenu").removeClass("active");
-  })
 
-  $("#changescope").on("click", function() {
+  $("#changescope").on("click", function() { 
     $.ajax({
       url: "test.html",
       cache: false
@@ -260,12 +150,9 @@ $(document).ready(function() {
         $( "#graph" ).show( "puff", 700 );
       });
    });
-
-
-
-  $("#global_view").on("click", function() {
+  $("#backtoroot").on("click", function() { 
     $.ajax({
-      url: "global.html",
+      url: "test2.html",
       cache: false
     })
       .done(function( html ) {
@@ -275,12 +162,9 @@ $(document).ready(function() {
         $( "#graph" ).show( "puff", 700 );
       });
    });
-
-
-
-  $("#collaborateur").on("click", function() {
+  $("#oldview").on("click", function() { 
     $.ajax({
-      url: "collaborateur.html",
+      url: "test3.html",
       cache: false
     })
       .done(function( html ) {
@@ -290,12 +174,9 @@ $(document).ready(function() {
         $( "#graph" ).show( "puff", 700 );
       });
    });
-
-
-
-  $("#projet").on("click", function() {
+  $("#projectview").on("click", function() { 
     $.ajax({
-      url: "projet.html",
+      url: "test4.html",
       cache: false
     })
       .done(function( html ) {
@@ -305,18 +186,14 @@ $(document).ready(function() {
         $( "#graph" ).show( "puff", 700 );
       });
    });
-
-
-
-
   });
 
 var margin = 20,
     diameter = 960;
 
 var color = d3.scale.linear()
-    .domain([-1, 5])
-    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .domain([-1, 6])
+    .range(["hsl(24,80%,80%)", "hsl(228,30%,40%)"])
     .interpolate(d3.interpolateHcl);
 
 var pack = d3.layout.pack()
@@ -330,24 +207,7 @@ var svg = d3.select("#graph").append("svg")
   .append("g")
     .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
-var defs = svg.append('svg:defs');
-
-
-var addImage = function(defs, id, image, w, h)
-{
-  defs.append('svg:pattern')
-                .attr('id', id)
-                .attr('width', w)
-                .attr('height', h)
-                .append('svg:image')
-                .attr('xlink:href', image)
-                .attr('x', 0)
-                .attr('y', 0)
-                .attr('width', w)
-                .attr('height', h);
-};
-
-d3.json("global.json", function(error, root) {
+d3.json("collaborateur.json", function(error, root) {
   if (error) return console.error(error);
 
   var focus = root,
@@ -358,19 +218,7 @@ d3.json("global.json", function(error, root) {
       .data(nodes)
     .enter().append("circle")
       .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
-      .style("fill", function(d) {
-        if (d.children)
-          return color(d.depth);
-        else
-        {
-          return null;
-          if (d.image)
-          {
-            addImage(defs, d.name, d.image, d.r * 4, d.r * 4);
-            return "url(#" + d.name + ")";
-          }
-        }
-      })
+      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
       .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
 
   var text = svg.selectAll("text")
@@ -386,30 +234,14 @@ d3.json("global.json", function(error, root) {
 
   d3.select("#graph")
       .style("background", color(-1))
-      .on("click", function() { 
-    $.ajax({
-      url: "collaborateur.html",
-      cache: false
-    })
-      .done(function( html ) {
-
-        $( "#graph" ).hide();
-        $( "#graph" ).html( html );
-        $( "#graph" ).show( "puff", 700 );
-      });
-
-
-
-   });
-  d3.select("#backtoroot")
-      //.style("background", color(-1))
       .on("click", function() { zoom(root); });
+  //d3.select("#backtoroot")
+      //.style("background", color(-1))
+   //   .on("click", function() { zoom(root); });
 
   zoomTo([root.x, root.y, root.r * 2 + margin]);
 
   function zoom(d) {
-            console.log(d);
-            console.log(this);
     var focus0 = focus; focus = d;
 
     var transition = d3.transition()
@@ -440,10 +272,9 @@ d3.select(self.frameElement).style("height", diameter + "px");
 <br />
 <br />
 <br />
-<!--<input type="button" value="Use this scope" id="changescope" />-->
-<center>
-<input type="button" class="button big blue" style="color:white;"  value="Dezoom" id="backtoroot" />
-<input type="button" class="button big blue" value="Vue globale" id="global_view" />
-</center>
+<input type="button" value="Global view" id="changescope" />
+<input type="button" value="User view" id="backtoroot" />
+<input type="button" value="User view as of Last year" id="oldview" />
+<input type="button" value="Project view" id="projectview" />
 
 </html>

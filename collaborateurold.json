@@ -1,0 +1,107 @@
+{
+ "name": "Jean-Michel JEAN-MICHEL",
+ "children": [
+  {
+   "name": "Teams",
+   "children": [
+    {
+     "name": "Elite Task Force",
+     "children": [
+      {"name": "2 interns", "size": 721},
+      {"name": "13 devs", "size": 4294},
+      {"name": "deputy-chief : Jacques Fouroux", "size": 9800},
+      {"name": "Head of project : Will Carling", "size": 10000},
+      {"name": "5 support resources", "size": 5220}
+     ]
+    },
+    {"name": "DataField", "size": 1759},
+    {"name": "DataSchema", "size": 2165},
+    {"name": "DataSource", "size": 3331},
+    {"name": "DataUtil", "size": 3322}
+   ]
+  },
+  {
+   "name": "Technos",
+   "children": [
+    {
+     "name": "Databases",
+     "children": [
+      {"name": "Oracle", "size": 3165},
+      {"name": "SQL", "size": 2815},
+      {"name": "Access", "size": 3366}
+     ]
+    },
+    {"name": "Python", "size": 17705},
+    {
+     "name": "Web",
+     "children": [
+      {"name": "PHP", "size": 1229},
+      {"name": "Javascript", "size": 2059},
+      {"name": "HMTL+CSS", "size": 2291}
+     ]
+    }   ]
+  },
+  {
+   "name": "Ongoing Projects",
+   "children": [
+    {
+     "name": "VBA Harmonization",
+     "children": [
+      {"name": "Delivery date : 30/07/2013", "size": 29000},
+      {"name": "9 people team", "size": 11000},
+      {"name": "Status : project leader", "size": 22000},
+      {
+       "name": "Tasks",
+       "children": [
+        {"name": "Data sorting and crunching", "size": 5000},
+        {"name": "Conception of Dolphin Analysis model", "size": 10000},
+        {"name": "Updating internal database", "size": 5000},
+        {"name": "Evaluation of Control tools", "size": 7000}
+       ]
+      }
+     ]
+    },
+    {
+     "name": "P&L reporting automatization",
+     "children": [
+      {"name": "Delivery date : 02/03/2012", "size": 29000},
+      {"name": "3 people team", "size": 11000},
+      {"name": "Status : Developper", "size": 22000},
+      {
+       "name": "Tasks",
+       "children": [
+        {"name": "Data sorting and crunching", "size": 5000},
+        {"name": "Conception of Dolphin Analysis model", "size": 10000},
+        {"name": "Updating internal database", "size": 5000},
+        {"name": "Evaluation of Control tools", "size": 7000}
+       ]
+      }
+     ]
+    },
+    {
+     "name": "International trading platform",
+     "children": [
+      {
+       "name": "Team",
+       "children": [
+        {"name": "Jean-Pierre Rives - Head of IT", "size": 6500},
+        {"name": "Olivier Merle - Associate", "size": 5000},
+        {"name": "Pierre Berbizier - stagiaire", "size": 3444}
+       ]
+      },
+      {
+       "name": "Tasks",
+       "children": [
+        {"name": "ColorEncoder", "size": 3179},
+        {"name": "Encoder", "size": 4060},
+        {"name": "PropertyEncoder", "size": 4138},
+        {"name": "ShapeEncoder", "size": 1690},
+        {"name": "SizeEncoder", "size": 1830}
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

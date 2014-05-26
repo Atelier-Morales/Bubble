@@ -1,0 +1,355 @@
+{
+ "name": "ITEC",
+ "children": [
+  {
+   "name": "CRS",
+   "children": [
+    {"name": "Responsable de secteur", "size": 30000},
+    {
+     "name": "Projet 1",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 2",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 3",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    },
+    {
+     "name": "Projet 2",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    }]
+  },
+  {
+   "name": "DFI",
+   "children": [
+    {"name": "Responsable de secteur", "size": 30000},
+    {
+     "name": "Projet 1",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 2",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000}]
+      }]
+    },
+    {
+     "name": "Projet 2",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+      },
+      {
+     "name": "Projet 3",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 2",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000}]
+      }]
+    }]
+  },
+  {
+   "name": "GLS",
+   "children": [
+    {"name": "Responsable de secteur", "size": 30000},
+    {
+     "name": "Projet 1",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 2",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    },
+    {
+     "name": "Projet 2",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    }]
+  },
+  {
+   "name": "IBD",
+   "children": [
+    {"name": "Responsable de secteur", "size": 30000},
+    {
+     "name": "Projet 1",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 2",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 3",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    },
+    {
+     "name": "Projet 2",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    }]
+  },
+  {
+   "name": "IDEA",
+   "children": [
+    {"name": "Responsable de secteur", "size": 30000},
+    {
+     "name": "Projet 1",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 2",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 3",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    },
+    {
+     "name": "Projet 2",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    }]
+  },
+  {
+   "name": "SEC",
+   "children": [
+    {"name": "Responsable de secteur", "size": 30000},
+    {
+     "name": "Projet 1",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 2",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 3",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    },
+    {
+     "name": "Projet 2",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    }]
+  },
+  {
+   "name": "STR",
+   "children": [
+    {"name": "Responsable de secteur", "size": 30000},
+    {
+     "name": "Projet 1",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 2",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      },
+      {
+      	"name": "Equipe 3",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    },
+    {
+     "name": "Projet 2",
+     "children": [
+      {"name": "Responsable de projet", "size": 8000},
+      {
+      	"name": "Equipe 1",
+      	"children": [
+      		{"name": "Responsable d'equipe", "size": 6000},
+      		{"name": "Développeur 1", "size": 3000},
+      		{"name": "Développeur 2", "size": 3000},
+      		{"name": "Développeur 3", "size": 3000},
+      		{"name": "Développeur 4", "size": 3000}]
+      }]
+    }]
+  }]
+}
